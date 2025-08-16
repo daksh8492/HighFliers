@@ -215,19 +215,11 @@
             background-clip: text;
         }
 
-        /* Hero Video Section */
-        .hero-video {
-            background: var(--white);
-            padding: 3rem 0;
+        /* Compact spacing for QR-optimized page */
+        .section {
+            padding: 2rem 0;
             margin: 0;
             position: relative;
-            top: 0;
-        }
-
-        /* Ensure no gap between header and hero video */
-        .header + .hero-video {
-            margin-top: 0;
-            padding-top: 3rem;
         }
 
         .video-container {
@@ -285,24 +277,24 @@
             color: var(--text-dark);
         }
 
-        /* Our Domains Section */
+        /* Our Domains Section - Compact for QR scanning */
         .our-domains {
             background: var(--white);
-            padding: 4rem 0;
+            padding: 2rem 0;
             margin: 0;
             position: relative;
         }
 
         .domains-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
         }
 
         .domain-card {
             background: var(--white);
-            padding: 2rem;
+            padding: 1.5rem 1rem;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
             text-align: center;
@@ -333,9 +325,9 @@
         }
 
         .domain-card i {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             color: var(--primary-color);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             transition: var(--transition);
         }
 
@@ -345,353 +337,100 @@
 
         .domain-card h3 {
             color: var(--text-dark);
-            margin-bottom: 0.5rem;
-            font-size: 1.3rem;
+            margin-bottom: 0;
+            font-size: 1rem;
+            font-weight: 600;
         }
 
         .domain-card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            line-height: 1.5;
+            display: none;
         }
 
-        /* About Section */
-        .about {
+        /* Compact Team Section */
+        .team-section {
             background: var(--bg-light);
             margin: 0;
             position: relative;
         }
 
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-
-        .benefit-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
+        .team-photo-compact {
             text-align: center;
-            transition: var(--transition);
-            border: 1px solid #e5e7eb;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .benefit-card i {
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .benefit-card h3 {
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .benefit-card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
-
-        /* Poster Gallery */
-        .poster-gallery {
-            background: var(--bg-light);
-            margin: 0;
-            position: relative;
-        }
-
-        .gallery-container {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .gallery-slider {
-            display: flex;
-            overflow: hidden;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-        }
-
-        .gallery-slide {
-            min-width: 100%;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-slide img {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 4/3;
-            object-fit: cover;
-        }
-
-        .gallery-nav {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
             margin-top: 2rem;
         }
 
-        .gallery-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--text-light);
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .gallery-dot.active {
-            background: var(--primary-color);
-            transform: scale(1.2);
-        }
-
-        /* Meet Our Team */
-        .meet-our-team {
-            background: var(--white);
-            margin: 0;
-            position: relative;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .team-photo {
-            background: var(--bg-light);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .team-photo:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .team-photo img {
+        .team-photo-compact img {
             width: 100%;
+            max-width: 600px;
             height: auto;
-            aspect-ratio: 4/3;
-            object-fit: cover;
-        }
-
-        .team-photo-caption {
-            padding: 1.5rem;
-            text-align: center;
-        }
-
-        .team-photo-caption h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .team-photo-caption p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
-
-        .team-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 3rem;
-            text-align: center;
-        }
-
-        .stat-item {
-            background: var(--bg-light);
-            padding: 2rem;
             border-radius: var(--border-radius);
-            border: 1px solid #e5e7eb;
+            box-shadow: var(--shadow);
         }
 
-        .stat-number {
-            font-size: 3rem;
+        .team-stats-compact {
+            margin-top: 1.5rem;
+        }
+
+        .stat-compact {
+            display: inline-block;
+            text-align: center;
+            background: var(--white);
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .stat-compact .stat-number {
+            display: block;
+            font-size: 2.5rem;
             font-weight: 800;
             color: var(--primary-color);
             margin-bottom: 0.5rem;
         }
 
-        .stat-label {
+        .stat-compact .stat-label {
             color: var(--text-dark);
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
-        /* What We Offer */
-        .what-we-offer {
-            background: var(--bg-light);
-        }
 
-        .accordion {
-            max-width: 800px;
-            margin: 0 auto;
-        }
 
-        .accordion-item {
-            border: 1px solid #e5e7eb;
-            border-radius: var(--border-radius);
-            margin-bottom: 1rem;
-            overflow: hidden;
-        }
 
-        .accordion-header {
-            background: var(--bg-light);
-            padding: 1.5rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: var(--transition);
-        }
 
-        .accordion-header:hover {
-            background: #e5e7eb;
-        }
-
-        .accordion-header h3 {
-            margin: 0;
-            font-size: 1.1rem;
-        }
-
-        .accordion-icon {
-            transition: var(--transition);
-        }
-
-        .accordion-item.active .accordion-icon {
-            transform: rotate(180deg);
-        }
-
-        .accordion-content {
-            padding: 0 1.5rem;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-
-        .accordion-item.active .accordion-content {
-            padding: 1.5rem;
-            max-height: 200px;
-        }
-
-        /* Application Form */
-        .application-form {
-            background: var(--bg-light);
+        /* Quick Contact Section */
+        .quick-contact {
+            background: var(--white);
             margin: 0;
             position: relative;
         }
 
-        .form-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: var(--white);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
 
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: var(--text-dark);
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            border: 2px solid #e5e7eb;
-            border-radius: var(--border-radius);
-            font-size: 1rem;
-            transition: var(--transition);
-            font-family: inherit;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .submit-btn {
-            width: 100%;
+        .register-btn {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: var(--white);
-            padding: 1.25rem;
+            padding: 1.5rem 3rem;
             border: none;
             border-radius: var(--border-radius);
-            font-size: 1.1rem;
-            font-weight: 600;
+            font-size: 1.3rem;
+            font-weight: 700;
             cursor: pointer;
             transition: var(--transition);
-            margin-top: 1rem;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
             box-shadow: var(--shadow-lg);
         }
 
-        .submit-btn:active {
-            transform: translateY(0);
+        .register-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
 
-        /* Contact Section */
-        .contact {
-            background: var(--white);
-            margin: 0;
-            position: relative;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .contact-card {
-            background: var(--bg-light);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            text-align: center;
-            border: 1px solid #e5e7eb;
-        }
-
-        .contact-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .whatsapp-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
+        .whatsapp-btn-compact {
             background: #25d366;
             color: var(--white);
             padding: 1rem 2rem;
@@ -699,46 +438,35 @@
             text-decoration: none;
             font-weight: 600;
             transition: var(--transition);
-            margin-top: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .whatsapp-btn:hover {
+        .whatsapp-btn-compact:hover {
             background: #128c7e;
             transform: translateY(-2px);
         }
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .social-link {
-            width: 50px;
-            height: 50px;
-            background: var(--primary-color);
-            color: var(--white);
-            border-radius: 50%;
+        .social-handle {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            font-weight: 600;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: var(--transition);
+            gap: 0.5rem;
         }
 
-        .social-link:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow);
+        .social-handle i {
+            color: #e4405f;
+            font-size: 1.3rem;
         }
 
-        .social-link.instagram {
-            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-        }
 
-        .social-link.linkedin {
-            background: #0077b5;
-        }
+
+
+
+
 
         /* Footer */
         .footer {
@@ -767,14 +495,6 @@
             .domains-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-
-            .benefits-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .contact-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
         }
 
         @media (min-width: 1024px) {
@@ -784,14 +504,6 @@
 
             .domains-grid {
                 grid-template-columns: repeat(4, 1fr);
-            }
-
-            .benefits-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .contact-grid {
-                grid-template-columns: repeat(3, 1fr);
             }
         }
 
@@ -841,33 +553,7 @@
             scroll-padding-top: 0;
         }
 
-        /* Loading States */
-        .loading {
-            opacity: 0.7;
-            pointer-events: none;
-        }
 
-        /* Success Message */
-        .success-message {
-            background: #d1fae5;
-            color: #065f46;
-            padding: 1rem;
-            border-radius: var(--border-radius);
-            margin-top: 1rem;
-            text-align: center;
-            display: none;
-        }
-
-        /* Error Message */
-        .error-message {
-            background: #fee2e2;
-            color: #991b1b;
-            padding: 1rem;
-            border-radius: var(--border-radius);
-            margin-top: 1rem;
-            text-align: center;
-            display: none;
-        }
     </style>
 </head>
 <body>
@@ -890,19 +576,7 @@
                 <div class="tagline">Transform Your Ideas Into Reality</div>
             </div>
         </div>
-    </header><!-- Hero Video Section -->
-    <section class="hero-video section">
-        <div class="container">
-            <div class="video-container">
-                <div class="video-placeholder" id="videoPlaceholder">
-                    <div class="play-button">
-                        <i class="fas fa-play"></i>
-                    </div>
-                </div>
-            </div>
-            <p class="video-caption">See what we're all about</p>
-        </div>
-    </section>
+    </header>
 
     <!-- Our Domains Section -->
     <section class="our-domains section">
@@ -957,235 +631,70 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about section">
-        <div class="container">
-            <div class="section-title">
-                <h2>About HighFliers</h2>
-                <p>Transform your creative skills, build confidence, and develop leadership abilities in a supportive community of like-minded creative students.</p>
-            </div>
-            
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <i class="fas fa-microphone"></i>
-                    <h3>Public Speaking Skills</h3>
-                    <p>Master the art of communication and become a confident speaker in any situation.</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-crown"></i>
-                    <h3>Leadership Development</h3>
-                    <p>Learn to lead teams, manage projects, and inspire others through practical experience.</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-star"></i>
-                    <h3>Confidence Building</h3>
-                    <p>Build unshakeable self-confidence through workshops, activities, and peer support.</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-network-wired"></i>
-                    <h3>Networking Opportunities</h3>
-                    <p>Connect with seniors, alumni, and industry professionals to expand your network.</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-briefcase"></i>
-                    <h3>Career Preparation</h3>
-                    <p>Gain essential skills and experiences that will set you apart in your future career.</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-seedling"></i>
-                    <h3>Personal Growth</h3>
-                    <p>Discover your strengths, overcome weaknesses, and become the best version of yourself.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Poster Gallery Section -->
-    <section class="poster-gallery section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Recruitment Posters</h2>
-                <p>Take a look at our exciting events and activities</p>
-            </div>
-            
-            <div class="gallery-container">
-                <div class="gallery-slider" id="gallerySlider">
-                    <div class="gallery-slide">
-                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><rect width='800' height='600' fill='%231e40af'/><text x='400' y='300' text-anchor='middle' fill='white' font-size='48' font-family='Arial'>Workshop Poster 1</text></svg>" alt="Personality Development Workshop">
-                    </div>
-                    <div class="gallery-slide">
-                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><rect width='800' height='600' fill='%23059669'/><text x='400' y='300' text-anchor='middle' fill='white' font-size='48' font-family='Arial'>Leadership Event</text></svg>" alt="Leadership Development Event">
-                    </div>
-                    <div class="gallery-slide">
-                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><rect width='800' height='600' fill='%23f59e0b'/><text x='400' y='300' text-anchor='middle' fill='white' font-size='48' font-family='Arial'>Public Speaking Contest</text></svg>" alt="Public Speaking Contest">
-                    </div>
-                    <div class="gallery-slide">
-                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><rect width='800' height='600' fill='%23dc2626'/><text x='400' y='300' text-anchor='middle' fill='white' font-size='48' font-family='Arial'>Networking Meet</text></svg>" alt="Networking Meet">
-                    </div>
-                </div>
-                
-                <div class="gallery-nav" id="galleryNav">
-                    <div class="gallery-dot active" data-slide="0"></div>
-                    <div class="gallery-dot" data-slide="1"></div>
-                    <div class="gallery-dot" data-slide="2"></div>
-                    <div class="gallery-dot" data-slide="3"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Meet Our Team Section -->
-    <section class="meet-our-team section">
+    <!-- Compact Team Section -->
+    <section class="team-section section">
         <div class="container">
             <div class="section-title">
                 <h2>Meet the HighFliers Family</h2>
-                <p>Get to know our creative community and the amazing people behind our success</p>
             </div>
             
-            <div class="team-grid">
-                <div class="team-photo">
-                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><rect width='800' height='600' fill='%236366f1'/><text x='400' y='300' text-anchor='middle' fill='white' font-size='48' font-family='Arial'>Our Creative Squad</text></svg>" alt="HighFliers Creative Squad">
-                    <div class="team-photo-caption">
-                        <h3>Our Creative Squad</h3>
-                        <p>The talented individuals who bring creativity to life</p>
+            <div class="team-photo-compact">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'><rect width='800' height='400' fill='%236366f1'/><text x='400' y='200' text-anchor='middle' fill='white' font-size='48' font-family='Arial'>HighFliers Creative Squad</text></svg>" alt="HighFliers Creative Squad">
+                <div class="team-stats-compact">
+                    <div class="stat-compact">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Creative Members</span>
                     </div>
-                </div>
-                
-                <div class="team-photo">
-                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><rect width='800' height='600' fill='%238b5cf6'/><text x='400' y='300' text-anchor='middle' fill='white' font-size='48' font-family='Arial'>Building Dreams Together</text></svg>" alt="HighFliers Team Building">
-                    <div class="team-photo-caption">
-                        <h3>Building Dreams Together</h3>
-                        <p>Collaboration and teamwork drive our success</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="team-stats">
-                <div class="stat-item">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Active Members</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">8</div>
-                    <div class="stat-label">Creative Domains</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Application Form Section -->
-    <section class="application-form section">
+
+
+    <!-- Compact Team Section -->
+    <section class="team-section section">
         <div class="container">
             <div class="section-title">
-                <h2>Join HighFliers</h2>
-                <p>Take the first step towards unleashing your creative potential and joining our innovative community</p>
+                <h2>Meet the HighFliers Family</h2>
             </div>
             
-            <div class="form-container">
-                <form id="applicationForm">
-                    <div class="form-group">
-                        <label for="fullName">Full Name *</label>
-                        <input type="text" id="fullName" name="fullName" required>
+            <div class="team-photo-compact">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'><rect width='800' height='400' fill='%236366f1'/><text x='400' y='200' text-anchor='middle' fill='white' font-size='48' font-family='Arial'>HighFliers Creative Squad</text></svg>" alt="HighFliers Creative Squad">
+                <div class="team-stats-compact">
+                    <div class="stat-compact">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Creative Members</span>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="yearBranch">Year & Branch *</label>
-                        <select id="yearBranch" name="yearBranch" required>
-                            <option value="">Select Year & Branch</option>
-                            <option value="1st Year CSE">1st Year CSE</option>
-                            <option value="1st Year ECE">1st Year ECE</option>
-                            <option value="1st Year ME">1st Year ME</option>
-                            <option value="1st Year CE">1st Year CE</option>
-                            <option value="1st Year Other">1st Year Other</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="whatsapp">WhatsApp Number</label>
-                        <input type="tel" id="whatsapp" name="whatsapp">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="motivation">Why do you want to join? * (Max 100 words)</label>
-                        <textarea id="motivation" name="motivation" maxlength="100" required placeholder="Tell us what motivates you to join our club and what you hope to achieve..."></textarea>
-                        <small id="wordCount">0/100 words</small>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="experience">Any prior experience? (Optional)</label>
-                        <textarea id="experience" name="experience" placeholder="Share any relevant experience in public speaking, leadership, or personal development..."></textarea>
-                    </div>
-                    
-                    <button type="button" class="submit-btn" onclick="window.open('GOOGLE_FORM_URL_HERE', '_blank')">
-                        <i class="fab fa-google"></i> Register with Google Forms
-                    </button>
-                </form>
-                
-                <div class="success-message" id="successMessage">
-                    <i class="fas fa-check-circle"></i> Thank you! Your application has been submitted successfully. We'll get back to you soon!
-                </div>
-                
-                <div class="error-message" id="errorMessage">
-                    <i class="fas fa-exclamation-circle"></i> Please fill in all required fields correctly.
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact section">
+    <!-- Quick Contact/Register Section -->
+    <section class="quick-contact section">
         <div class="container">
             <div class="section-title">
-                <h2>Get In Touch</h2>
-                <p>Have questions? We're here to help you get started on your journey</p>
+                <h2>Ready to Join?</h2>
             </div>
             
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <h3>Club Convenor</h3>
-                    <p><strong>Prof. [Name]</strong></p>
-                    <p>Department of [Department]</p>
-                    <p>Email: convenor@highfliers.com</p>
-                    <p>Phone: +91 [Phone Number]</p>
-                </div>
+            <div class="action-buttons">
+                <button type="button" class="register-btn" onclick="window.open('GOOGLE_FORM_URL_HERE', '_blank')">
+                    <i class="fab fa-google"></i> Register Now
+                </button>
                 
-                <div class="contact-card">
-                    <h3>Quick Contact</h3>
-                    <p>Get instant answers to your questions via WhatsApp</p>
-                    <a href="https://wa.me/91[PHONE_NUMBER]?text=Hi! I'm interested in joining HighFliers Creative Club. Can you tell me more?" class="whatsapp-btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                    </a>
-                </div>
+                <a href="https://wa.me/91[PHONE_NUMBER]?text=Hi! I'm interested in joining HighFliers Creative Club. Can you tell me more?" class="whatsapp-btn-compact" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
                 
-                <div class="contact-card">
-                    <h3>Meeting Schedule</h3>
-                    <p><strong>Every Saturday</strong></p>
-                    <p><strong>Time:</strong> 3:00 PM - 5:00 PM</p>
-                    <p><strong>Location:</strong> Seminar Hall, Block A</p>
-                    <p>Drop by anytime to see us in action!</p>
+                <div class="social-handle">
+                    <i class="fab fa-instagram"></i> @highfliers_creative
                 </div>
-            </div>
-            
-            <div class="social-links">
-                <a href="#" class="social-link instagram" aria-label="Follow us on Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="social-link linkedin" aria-label="Connect with us on LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
             </div>
         </div>
     </section>
+
+
 
         <!-- Footer -->
     <footer class="footer">
@@ -1196,46 +705,7 @@
     </footer>
 
     <script>
-        // Gallery Slider Functionality
-        class GallerySlider {
-            constructor() {
-                this.currentSlide = 0;
-                this.slides = document.querySelectorAll('.gallery-slide');
-                this.dots = document.querySelectorAll('.gallery-dot');
-                this.totalSlides = this.slides.length;
-                
-                this.init();
-            }
-            
-            init() {
-                this.dots.forEach((dot, index) => {
-                    dot.addEventListener('click', () => this.goToSlide(index));
-                });
-                
-                // Auto-advance slides every 5 seconds
-                setInterval(() => this.nextSlide(), 5000);
-            }
-            
-            goToSlide(index) {
-                this.currentSlide = index;
-                this.updateSlider();
-            }
-            
-            nextSlide() {
-                this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
-                this.updateSlider();
-            }
-            
-            updateSlider() {
-                const offset = -this.currentSlide * 100;
-                document.getElementById('gallerySlider').style.transform = `translateX(${offset}%)`;
-                
-                // Update active dot
-                this.dots.forEach((dot, index) => {
-                    dot.classList.toggle('active', index === this.currentSlide);
-                });
-            }
-        }
+
 
         // Team Stats Animation
         class TeamStats {
@@ -1266,164 +736,13 @@
             }
         }
 
-        // Form Handling
-        class ApplicationForm {
-            constructor() {
-                this.form = document.getElementById('applicationForm');
-                this.motivationField = document.getElementById('motivation');
-                this.wordCount = document.getElementById('wordCount');
-                this.successMessage = document.getElementById('successMessage');
-                this.errorMessage = document.getElementById('errorMessage');
-                
-                this.init();
-            }
-            
-            init() {
-                this.form.addEventListener('submit', (e) => this.handleSubmit(e));
-                this.motivationField.addEventListener('input', () => this.updateWordCount());
-                
-                // Initialize word count
-                this.updateWordCount();
-            }
-            
-            updateWordCount() {
-                const words = this.motivationField.value.trim().split(/\s+/).filter(word => word.length > 0);
-                const count = words.length;
-                this.wordCount.textContent = `${count}/100 words`;
-                
-                if (count > 100) {
-                    this.wordCount.style.color = '#dc2626';
-                } else {
-                    this.wordCount.style.color = '#6b7280';
-                }
-            }
-            
-            handleSubmit(e) {
-                e.preventDefault();
-                
-                if (this.validateForm()) {
-                    this.showSuccess();
-                    this.form.reset();
-                    this.updateWordCount();
-                } else {
-                    this.showError();
-                }
-            }
-            
-            validateForm() {
-                const requiredFields = ['fullName', 'yearBranch', 'phone', 'email', 'motivation'];
-                
-                return requiredFields.every(fieldName => {
-                    const field = document.getElementById(fieldName);
-                    return field.value.trim() !== '';
-                });
-            }
-            
-            showSuccess() {
-                this.successMessage.style.display = 'block';
-                this.errorMessage.style.display = 'none';
-                
-                setTimeout(() => {
-                    this.successMessage.style.display = 'none';
-                }, 5000);
-            }
-            
-            showError() {
-                this.errorMessage.style.display = 'block';
-                this.successMessage.style.display = 'none';
-                
-                setTimeout(() => {
-                    this.errorMessage.style.display = 'none';
-                }, 5000);
-            }
-        }
 
-        // Video Placeholder Click Handler
-        function initVideoPlaceholder() {
-            const videoPlaceholder = document.getElementById('videoPlaceholder');
-            
-            videoPlaceholder.addEventListener('click', () => {
-                // In a real implementation, this would open a video modal or redirect to video
-                alert('Video player would open here! In a real implementation, this could open a YouTube video, Vimeo embed, or custom video player.');
-            });
-        }
 
-        // Smooth Scrolling for Navigation
-        function initSmoothScrolling() {
-            // Add smooth scrolling to any anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        }
 
-        // Form Input Focus Effects
-        function initFormEffects() {
-            const formInputs = document.querySelectorAll('.form-group input, .form-group select, .form-group textarea');
-            
-            formInputs.forEach(input => {
-                input.addEventListener('focus', () => {
-                    input.parentElement.style.transform = 'scale(1.02)';
-                });
-                
-                input.addEventListener('blur', () => {
-                    input.parentElement.style.transform = 'scale(1)';
-                });
-            });
-        }
-
-        // Lazy Loading for Images (if using real images)
-        function initLazyLoading() {
-            if ('IntersectionObserver' in window) {
-                const imageObserver = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const img = entry.target;
-                            img.src = img.dataset.src;
-                            img.classList.remove('lazy');
-                            imageObserver.unobserve(img);
-                        }
-                    });
-                });
-                
-                document.querySelectorAll('img[data-src]').forEach(img => {
-                    imageObserver.observe(img);
-                });
-            }
-        }
-
-        // Mobile Touch Optimizations
-        function initMobileOptimizations() {
-            // Disable double-tap zoom on buttons and interactive elements
-            const interactiveElements = document.querySelectorAll('button, .submit-btn, .accordion-header, .gallery-dot');
-            
-            interactiveElements.forEach(element => {
-                element.addEventListener('touchend', (e) => {
-                    e.preventDefault();
-                    element.click();
-                });
-            });
-        }
 
         // Initialize everything when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
-            new GallerySlider();
             new TeamStats();
-            new ApplicationForm();
-            
-            initVideoPlaceholder();
-            initSmoothScrolling();
-            initFormEffects();
-            initLazyLoading();
-            initMobileOptimizations();
             
             // Add loading animation
             document.body.classList.add('loaded');
@@ -1457,7 +776,7 @@
             }, observerOptions);
             
             // Observe elements for animation
-            document.querySelectorAll('.domain-card, .benefit-card, .contact-card, .form-container, .team-photo').forEach(el => {
+            document.querySelectorAll('.domain-card, .team-photo-compact, .action-buttons').forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(30px)';
                 el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
