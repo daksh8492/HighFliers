@@ -366,32 +366,7 @@
             box-shadow: var(--shadow);
         }
 
-        .team-stats-compact {
-            margin-top: 1.5rem;
-        }
 
-        .stat-compact {
-            display: inline-block;
-            text-align: center;
-            background: var(--white);
-            padding: 1rem 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-        }
-
-        .stat-compact .stat-number {
-            display: block;
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-compact .stat-label {
-            color: var(--text-dark);
-            font-weight: 600;
-            font-size: 1rem;
-        }
 
 
 
@@ -640,33 +615,6 @@
             
             <div class="team-photo-compact">
                 <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'><rect width='800' height='400' fill='%236366f1'/><text x='400' y='200' text-anchor='middle' fill='white' font-size='48' font-family='Arial'>HighFliers Creative Squad</text></svg>" alt="HighFliers Creative Squad">
-                <div class="team-stats-compact">
-                    <div class="stat-compact">
-                        <span class="stat-number">50+</span>
-                        <span class="stat-label">Creative Members</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Compact Team Section -->
-    <section class="team-section section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Meet the HighFliers Family</h2>
-            </div>
-            
-            <div class="team-photo-compact">
-                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'><rect width='800' height='400' fill='%236366f1'/><text x='400' y='200' text-anchor='middle' fill='white' font-size='48' font-family='Arial'>HighFliers Creative Squad</text></svg>" alt="HighFliers Creative Squad">
-                <div class="team-stats-compact">
-                    <div class="stat-compact">
-                        <span class="stat-number">50+</span>
-                        <span class="stat-label">Creative Members</span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -707,34 +655,7 @@
     <script>
 
 
-        // Team Stats Animation
-        class TeamStats {
-            constructor() {
-                this.stats = document.querySelectorAll('.stat-number');
-                this.init();
-            }
-            
-            init() {
-                this.animateStats();
-            }
-            
-            animateStats() {
-                this.stats.forEach(stat => {
-                    const target = parseInt(stat.textContent.replace('+', ''));
-                    const increment = target / 50;
-                    let current = 0;
-                    
-                    const timer = setInterval(() => {
-                        current += increment;
-                        if (current >= target) {
-                            current = target;
-                            clearInterval(timer);
-                        }
-                        stat.textContent = Math.floor(current) + (stat.textContent.includes('+') ? '+' : '');
-                    }, 50);
-                });
-            }
-        }
+
 
 
 
@@ -742,8 +663,6 @@
 
         // Initialize everything when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
-            new TeamStats();
-            
             // Add loading animation
             document.body.classList.add('loaded');
         });
