@@ -49,6 +49,8 @@
             color: var(--text-dark);
             background-color: var(--bg-light);
             overflow-x: hidden;
+            margin: 0;
+            padding: 0;
         }
 
         /* Typography */
@@ -78,6 +80,14 @@
 
         .section {
             padding: 4rem 0;
+            margin: 0;
+            position: relative;
+        }
+
+        /* Remove gaps between sections */
+        section {
+            margin: 0;
+            padding: 0;
         }
 
         .section-title {
@@ -104,9 +114,13 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            min-height: 100vh;
+            height: 100vh;
             display: flex;
             align-items: center;
+            margin: 0;
+            /* Ensure header stays visible and doesn't get hidden */
+            transform: none !important;
+            transition: none;
         }
 
         .header::before {
@@ -205,6 +219,15 @@
         .hero-video {
             background: var(--white);
             padding: 3rem 0;
+            margin: 0;
+            position: relative;
+            top: 0;
+        }
+
+        /* Ensure no gap between header and hero video */
+        .header + .hero-video {
+            margin-top: 0;
+            padding-top: 3rem;
         }
 
         .video-container {
@@ -266,6 +289,8 @@
         .our-domains {
             background: var(--white);
             padding: 4rem 0;
+            margin: 0;
+            position: relative;
         }
 
         .domains-grid {
@@ -333,6 +358,8 @@
         /* About Section */
         .about {
             background: var(--bg-light);
+            margin: 0;
+            position: relative;
         }
 
         .benefits-grid {
@@ -376,6 +403,8 @@
         /* Poster Gallery */
         .poster-gallery {
             background: var(--bg-light);
+            margin: 0;
+            position: relative;
         }
 
         .gallery-container {
@@ -427,6 +456,8 @@
         /* Meet Our Team */
         .meet-our-team {
             background: var(--white);
+            margin: 0;
+            position: relative;
         }
 
         .team-grid {
@@ -558,6 +589,8 @@
         /* Application Form */
         .application-form {
             background: var(--bg-light);
+            margin: 0;
+            position: relative;
         }
 
         .form-container {
@@ -631,6 +664,8 @@
         /* Contact Section */
         .contact {
             background: var(--white);
+            margin: 0;
+            position: relative;
         }
 
         .contact-grid {
@@ -711,6 +746,8 @@
             color: var(--white);
             text-align: center;
             padding: 2rem 0;
+            margin: 0;
+            position: relative;
         }
 
         .footer p {
@@ -763,6 +800,47 @@
         .mb-2 { margin-bottom: 2rem; }
         .mt-2 { margin-top: 2rem; }
 
+        /* Section Transition Fixes */
+        body > * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Ensure smooth section transitions */
+        .hero-video {
+            margin-top: 0;
+        }
+
+        /* Remove any default margins from body children */
+        body > section,
+        body > header,
+        body > footer {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Ensure sections stack properly without gaps */
+        section + section {
+            margin-top: 0;
+        }
+
+        /* Fix for any potential white space */
+        .section {
+            display: block;
+        }
+
+        /* Prevent header from being hidden or transformed */
+        .header {
+            transform: none !important;
+            transition: none !important;
+        }
+
+        /* Ensure smooth scrolling without header hiding */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 0;
+        }
+
         /* Loading States */
         .loading {
             opacity: 0.7;
@@ -812,9 +890,7 @@
                 <div class="tagline">Transform Your Ideas Into Reality</div>
             </div>
         </div>
-    </header>
-
-    <!-- Hero Video Section -->
+    </header><!-- Hero Video Section -->
     <section class="hero-video section">
         <div class="container">
             <div class="video-container">
@@ -1353,15 +1429,16 @@
             document.body.classList.add('loaded');
         });
 
-        // Add scroll-based header effects
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.style.transform = 'translateY(-100%)';
-            } else {
-                header.style.transform = 'translateY(0)';
-            }
-        });
+        // Remove the problematic scroll-based header hiding effect
+        // This was causing the white blank space when scrolling
+        // window.addEventListener('scroll', () => {
+        //     const header = document.querySelector('.header');
+        //     if (window.scrollY > 100) {
+        //         header.style.transform = 'translateY(-100%)';
+        //     } else {
+        //         header.style.transform = 'translateY(0)';
+        //     }
+        // });
 
         // Add some interactive animations
         function addScrollAnimations() {
