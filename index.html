@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join HighFliers! Where Creativity Meets Excellence. Transform your skills, build confidence, and develop leadership abilities in a supportive community of creative students.">
+    <meta name="keywords" content="HighFliers, Creative Club, Digital Design, Content Creation, Fine Arts, Public Speaking, Videography, Social Media, Event Management">
+    <meta name="author" content="HighFliers Creative Club">
+    <title>HighFliers - Where Creativity Meets Excellence</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #8b5cf6;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, #ec4899 100%);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        /* Floating Icons Animation */
+        .floating-icons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .floating-icon {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-icon:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+        .floating-icon:nth-child(2) { top: 60%; left: 80%; animation-delay: 2s; }
+        .floating-icon:nth-child(3) { top: 80%; left: 20%; animation-delay: 4s; }
+        .floating-icon:nth-child(4) { top: 30%; left: 70%; animation-delay: 1s; }
+        .floating-icon:nth-child(5) { top: 70%; left: 90%; animation-delay: 3s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.1; }
+            50% { transform: translateY(-20px) rotate(180deg); opacity: 0.3; }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-placeholder {
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .logo-placeholder i {
+            font-size: 4rem;
+            color: var(--white);
+        }
+
+        .header h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ffffff, #fbbf24, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: none;
+            font-weight: 800;
+            letter-spacing: -2px;
+        }
+
+        .header p {
+            font-size: 1.5rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            background: linear-gradient(45deg, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Hero Video Section */
+        .hero-video {
+            background: var(--white);
+            padding: 3rem 0;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 9/16;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .video-placeholder:hover {
+            transform: scale(1.02);
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .play-button i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-left: 4px;
+        }
+
+        .play-button:hover {
+            background: var(--white);
+            transform: scale(1.1);
+        }
+
+        .video-caption {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        /* Our Domains Section */
+        .our-domains {
+            background: var(--white);
+            padding: 4rem 0;
+        }
+
+        .domains-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .domain-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid #e5e7eb;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .domain-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.5s;
+        }
+
+        .domain-card:hover::before {
+            left: 100%;
+        }
+
+        .domain-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .domain-card i {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            transition: var(--transition);
+        }
+
+        .domain-card:hover i {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .domain-card h3 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .domain-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--bg-light);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid #e5e7eb;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .benefit-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Poster Gallery */
+        .poster-gallery {
+            background: var(--bg-light);
+        }
+
+        .gallery-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .gallery-slider {
+            display: flex;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .gallery-slide {
+            min-width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-slide img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+
+        .gallery-nav {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--text-light);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .gallery-dot.active {
+            background: var(--primary-color);
+            transform: scale(1.2);
+        }
+
+        /* Meet Our Team */
+        .meet-our-team {
+            background: var(--white);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-photo {
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .team-photo:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .team-photo img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+
+        .team-photo-caption {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .team-photo-caption h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-photo-caption p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .team-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border: 1px solid #e5e7eb;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* What We Offer */
+        .what-we-offer {
+            background: var(--bg-light);
+        }
+
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            border: 1px solid #e5e7eb;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .accordion-header:hover {
+            background: #e5e7eb;
+        }
+
+        .accordion-header h3 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .accordion-icon {
+            transition: var(--transition);
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-content {
+            padding: 1.5rem;
+            max-height: 200px;
+        }
+
+        /* Application Form */
+        .application-form {
+            background: var(--bg-light);
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 1.25rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border: 1px solid #e5e7eb;
+        }
+
+        .contact-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #25d366;
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            margin-top: 1rem;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128c7e;
+            transform: translateY(-2px);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .social-link.instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+
+        .social-link.linkedin {
+            background: #0077b5;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer p {
+            color: #9ca3af;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 2rem;
+            }
+
+            .header h1 {
+                font-size: 5rem;
+            }
+
+            .domains-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .header h1 {
+                font-size: 6rem;
+            }
+
+            .domains-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .mb-2 { margin-bottom: 2rem; }
+        .mt-2 { margin-top: 2rem; }
+
+        /* Loading States */
+        .loading {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        /* Success Message */
+        .success-message {
+            background: #d1fae5;
+            color: #065f46;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-top: 1rem;
+            text-align: center;
+            display: none;
+        }
+
+        /* Error Message */
+        .error-message {
+            background: #fee2e2;
+            color: #991b1b;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-top: 1rem;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="floating-icons">
+            <i class="fas fa-palette floating-icon" style="font-size: 3rem;"></i>
+            <i class="fas fa-camera floating-icon" style="font-size: 2.5rem;"></i>
+            <i class="fas fa-pen-fancy floating-icon" style="font-size: 3.5rem;"></i>
+            <i class="fas fa-video floating-icon" style="font-size: 2rem;"></i>
+            <i class="fas fa-brush floating-icon" style="font-size: 3rem;"></i>
+        </div>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-placeholder">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h1>HighFliers</h1>
+                <p>Where Creativity Meets Excellence</p>
+                <div class="tagline">Transform Your Ideas Into Reality</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Video Section -->
+    <section class="hero-video section">
+        <div class="container">
+            <div class="video-container">
+                <div class="video-placeholder" id="videoPlaceholder">
+                    <div class="play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+            <p class="video-caption">See what we're all about</p>
+        </div>
+    </section>
+
+    <!-- Our Domains Section -->
+    <section class="our-domains section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Creative Domains</h2>
+                <p>Explore the diverse creative fields where HighFliers excel and innovate</p>
+            </div>
+            
+            <div class="domains-grid">
+                <div class="domain-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>Digital Designing</h3>
+                    <p>Create stunning graphics, logos, and digital artwork using modern design tools and creative techniques.</p>
+                </div>
+                <div class="domain-card">
+                    <i class="fas fa-pen-fancy"></i>
+                    <h3>Content Writing</h3>
+                    <p>Craft compelling stories, articles, and marketing copy that engage and inspire your audience.</p>
+                </div>
+                <div class="domain-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Content Creation</h3>
+                    <p>Develop innovative content strategies and create engaging multimedia content for various platforms.</p>
+                </div>
+                <div class="domain-card">
+                    <i class="fas fa-brush"></i>
+                    <h3>Fine Arts</h3>
+                    <p>Express creativity through traditional and contemporary art forms, from painting to sculpture.</p>
+                </div>
+                <div class="domain-card">
+                    <i class="fas fa-microphone"></i>
+                    <h3>Public Speaking</h3>
+                    <p>Master the art of communication and become a confident speaker in any professional setting.</p>
+                </div>
+                <div class="domain-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>Videography/Photography</h3>
+                    <p>Capture moments and tell stories through the lens with professional photography and video skills.</p>
+                </div>
+                <div class="domain-card">
+                    <i class="fas fa-share-alt"></i>
+                    <h3>Social Media Management</h3>
+                    <p>Build and manage engaging social media presence with strategic content planning and community engagement.</p>
+                </div>
+                <div class="domain-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Event Management</h3>
+                    <p>Plan and execute memorable events from concept to completion with attention to every detail.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About HighFliers</h2>
+                <p>Transform your creative skills, build confidence, and develop leadership abilities in a supportive community of like-minded creative students.</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-microphone"></i>
+                    <h3>Public Speaking Skills</h3>
+                    <p>Master the art of communication and become a confident speaker in any situation.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-crown"></i>
+                    <h3>Leadership Development</h3>
+                    <p>Learn to lead teams, manage projects, and inspire others through practical experience.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Confidence Building</h3>
+                    <p>Build unshakeable self-confidence through workshops, activities, and peer support.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Networking Opportunities</h3>
+                    <p>Connect with seniors, alumni, and industry professionals to expand your network.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Career Preparation</h3>
+                    <p>Gain essential skills and experiences that will set you apart in your future career.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Personal Growth</h3>
+                    <p>Discover your strengths, overcome weaknesses, and become the best version of yourself.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Poster Gallery Section -->
+    <section class="poster-gallery section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Recruitment Posters</h2>
+                <p>Take a look at our exciting events and activities</p>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery-slider" id="gallerySlider">
+                    <div class="gallery-slide">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><rect width='800' height='600' fill='%231e40af'/><text x='400' y='300' text-anchor='middle' fill='white' font-size='48' font-family='Arial'>Workshop Poster 1</text></svg>" alt="Personality Development Workshop">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><rect width='800' height='600' fill='%23059669'/><text x='400' y='300' text-anchor='middle' fill='white' font-size='48' font-family='Arial'>Leadership Event</text></svg>" alt="Leadership Development Event">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><rect width='800' height='600' fill='%23f59e0b'/><text x='400' y='300' text-anchor='middle' fill='white' font-size='48' font-family='Arial'>Public Speaking Contest</text></svg>" alt="Public Speaking Contest">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><rect width='800' height='600' fill='%23dc2626'/><text x='400' y='300' text-anchor='middle' fill='white' font-size='48' font-family='Arial'>Networking Meet</text></svg>" alt="Networking Meet">
+                    </div>
+                </div>
+                
+                <div class="gallery-nav" id="galleryNav">
+                    <div class="gallery-dot active" data-slide="0"></div>
+                    <div class="gallery-dot" data-slide="1"></div>
+                    <div class="gallery-dot" data-slide="2"></div>
+                    <div class="gallery-dot" data-slide="3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Team Section -->
+    <section class="meet-our-team section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet the HighFliers Family</h2>
+                <p>Get to know our creative community and the amazing people behind our success</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-photo">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><rect width='800' height='600' fill='%236366f1'/><text x='400' y='300' text-anchor='middle' fill='white' font-size='48' font-family='Arial'>Our Creative Squad</text></svg>" alt="HighFliers Creative Squad">
+                    <div class="team-photo-caption">
+                        <h3>Our Creative Squad</h3>
+                        <p>The talented individuals who bring creativity to life</p>
+                    </div>
+                </div>
+                
+                <div class="team-photo">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><rect width='800' height='600' fill='%238b5cf6'/><text x='400' y='300' text-anchor='middle' fill='white' font-size='48' font-family='Arial'>Building Dreams Together</text></svg>" alt="HighFliers Team Building">
+                    <div class="team-photo-caption">
+                        <h3>Building Dreams Together</h3>
+                        <p>Collaboration and teamwork drive our success</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="team-stats">
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Active Members</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Creative Domains</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section class="application-form section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Join HighFliers</h2>
+                <p>Take the first step towards unleashing your creative potential and joining our innovative community</p>
+            </div>
+            
+            <div class="form-container">
+                <form id="applicationForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="yearBranch">Year & Branch *</label>
+                        <select id="yearBranch" name="yearBranch" required>
+                            <option value="">Select Year & Branch</option>
+                            <option value="1st Year CSE">1st Year CSE</option>
+                            <option value="1st Year ECE">1st Year ECE</option>
+                            <option value="1st Year ME">1st Year ME</option>
+                            <option value="1st Year CE">1st Year CE</option>
+                            <option value="1st Year Other">1st Year Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="whatsapp">WhatsApp Number</label>
+                        <input type="tel" id="whatsapp" name="whatsapp">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="motivation">Why do you want to join? * (Max 100 words)</label>
+                        <textarea id="motivation" name="motivation" maxlength="100" required placeholder="Tell us what motivates you to join our club and what you hope to achieve..."></textarea>
+                        <small id="wordCount">0/100 words</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="experience">Any prior experience? (Optional)</label>
+                        <textarea id="experience" name="experience" placeholder="Share any relevant experience in public speaking, leadership, or personal development..."></textarea>
+                    </div>
+                    
+                    <button type="button" class="submit-btn" onclick="window.open('GOOGLE_FORM_URL_HERE', '_blank')">
+                        <i class="fab fa-google"></i> Register with Google Forms
+                    </button>
+                </form>
+                
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i> Thank you! Your application has been submitted successfully. We'll get back to you soon!
+                </div>
+                
+                <div class="error-message" id="errorMessage">
+                    <i class="fas fa-exclamation-circle"></i> Please fill in all required fields correctly.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Have questions? We're here to help you get started on your journey</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Club Convenor</h3>
+                    <p><strong>Prof. [Name]</strong></p>
+                    <p>Department of [Department]</p>
+                    <p>Email: convenor@highfliers.com</p>
+                    <p>Phone: +91 [Phone Number]</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>Quick Contact</h3>
+                    <p>Get instant answers to your questions via WhatsApp</p>
+                    <a href="https://wa.me/91[PHONE_NUMBER]?text=Hi! I'm interested in joining HighFliers Creative Club. Can you tell me more?" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>Meeting Schedule</h3>
+                    <p><strong>Every Saturday</strong></p>
+                    <p><strong>Time:</strong> 3:00 PM - 5:00 PM</p>
+                    <p><strong>Location:</strong> Seminar Hall, Block A</p>
+                    <p>Drop by anytime to see us in action!</p>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="#" class="social-link instagram" aria-label="Follow us on Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link linkedin" aria-label="Connect with us on LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+        <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 HighFliers Creative Club. All rights reserved.</p>
+            <p>Where Creativity Meets Excellence - Empowering creative minds to soar higher.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Gallery Slider Functionality
+        class GallerySlider {
+            constructor() {
+                this.currentSlide = 0;
+                this.slides = document.querySelectorAll('.gallery-slide');
+                this.dots = document.querySelectorAll('.gallery-dot');
+                this.totalSlides = this.slides.length;
+                
+                this.init();
+            }
+            
+            init() {
+                this.dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                });
+                
+                // Auto-advance slides every 5 seconds
+                setInterval(() => this.nextSlide(), 5000);
+            }
+            
+            goToSlide(index) {
+                this.currentSlide = index;
+                this.updateSlider();
+            }
+            
+            nextSlide() {
+                this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+                this.updateSlider();
+            }
+            
+            updateSlider() {
+                const offset = -this.currentSlide * 100;
+                document.getElementById('gallerySlider').style.transform = `translateX(${offset}%)`;
+                
+                // Update active dot
+                this.dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === this.currentSlide);
+                });
+            }
+        }
+
+        // Team Stats Animation
+        class TeamStats {
+            constructor() {
+                this.stats = document.querySelectorAll('.stat-number');
+                this.init();
+            }
+            
+            init() {
+                this.animateStats();
+            }
+            
+            animateStats() {
+                this.stats.forEach(stat => {
+                    const target = parseInt(stat.textContent.replace('+', ''));
+                    const increment = target / 50;
+                    let current = 0;
+                    
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(timer);
+                        }
+                        stat.textContent = Math.floor(current) + (stat.textContent.includes('+') ? '+' : '');
+                    }, 50);
+                });
+            }
+        }
+
+        // Form Handling
+        class ApplicationForm {
+            constructor() {
+                this.form = document.getElementById('applicationForm');
+                this.motivationField = document.getElementById('motivation');
+                this.wordCount = document.getElementById('wordCount');
+                this.successMessage = document.getElementById('successMessage');
+                this.errorMessage = document.getElementById('errorMessage');
+                
+                this.init();
+            }
+            
+            init() {
+                this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+                this.motivationField.addEventListener('input', () => this.updateWordCount());
+                
+                // Initialize word count
+                this.updateWordCount();
+            }
+            
+            updateWordCount() {
+                const words = this.motivationField.value.trim().split(/\s+/).filter(word => word.length > 0);
+                const count = words.length;
+                this.wordCount.textContent = `${count}/100 words`;
+                
+                if (count > 100) {
+                    this.wordCount.style.color = '#dc2626';
+                } else {
+                    this.wordCount.style.color = '#6b7280';
+                }
+            }
+            
+            handleSubmit(e) {
+                e.preventDefault();
+                
+                if (this.validateForm()) {
+                    this.showSuccess();
+                    this.form.reset();
+                    this.updateWordCount();
+                } else {
+                    this.showError();
+                }
+            }
+            
+            validateForm() {
+                const requiredFields = ['fullName', 'yearBranch', 'phone', 'email', 'motivation'];
+                
+                return requiredFields.every(fieldName => {
+                    const field = document.getElementById(fieldName);
+                    return field.value.trim() !== '';
+                });
+            }
+            
+            showSuccess() {
+                this.successMessage.style.display = 'block';
+                this.errorMessage.style.display = 'none';
+                
+                setTimeout(() => {
+                    this.successMessage.style.display = 'none';
+                }, 5000);
+            }
+            
+            showError() {
+                this.errorMessage.style.display = 'block';
+                this.successMessage.style.display = 'none';
+                
+                setTimeout(() => {
+                    this.errorMessage.style.display = 'none';
+                }, 5000);
+            }
+        }
+
+        // Video Placeholder Click Handler
+        function initVideoPlaceholder() {
+            const videoPlaceholder = document.getElementById('videoPlaceholder');
+            
+            videoPlaceholder.addEventListener('click', () => {
+                // In a real implementation, this would open a video modal or redirect to video
+                alert('Video player would open here! In a real implementation, this could open a YouTube video, Vimeo embed, or custom video player.');
+            });
+        }
+
+        // Smooth Scrolling for Navigation
+        function initSmoothScrolling() {
+            // Add smooth scrolling to any anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Form Input Focus Effects
+        function initFormEffects() {
+            const formInputs = document.querySelectorAll('.form-group input, .form-group select, .form-group textarea');
+            
+            formInputs.forEach(input => {
+                input.addEventListener('focus', () => {
+                    input.parentElement.style.transform = 'scale(1.02)';
+                });
+                
+                input.addEventListener('blur', () => {
+                    input.parentElement.style.transform = 'scale(1)';
+                });
+            });
+        }
+
+        // Lazy Loading for Images (if using real images)
+        function initLazyLoading() {
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                });
+                
+                document.querySelectorAll('img[data-src]').forEach(img => {
+                    imageObserver.observe(img);
+                });
+            }
+        }
+
+        // Mobile Touch Optimizations
+        function initMobileOptimizations() {
+            // Disable double-tap zoom on buttons and interactive elements
+            const interactiveElements = document.querySelectorAll('button, .submit-btn, .accordion-header, .gallery-dot');
+            
+            interactiveElements.forEach(element => {
+                element.addEventListener('touchend', (e) => {
+                    e.preventDefault();
+                    element.click();
+                });
+            });
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new GallerySlider();
+            new TeamStats();
+            new ApplicationForm();
+            
+            initVideoPlaceholder();
+            initSmoothScrolling();
+            initFormEffects();
+            initLazyLoading();
+            initMobileOptimizations();
+            
+            // Add loading animation
+            document.body.classList.add('loaded');
+        });
+
+        // Add scroll-based header effects
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+            }
+        });
+
+        // Add some interactive animations
+        function addScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements for animation
+            document.querySelectorAll('.domain-card, .benefit-card, .contact-card, .form-container, .team-photo').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        }
+
+        // Initialize scroll animations
+        setTimeout(addScrollAnimations, 1000);
+    </script>
+</body>
+</html>
