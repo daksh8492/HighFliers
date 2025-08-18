@@ -25,8 +25,8 @@
         }
 
         :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
             --secondary: #8b5cf6;
             --secondary-dark: #7c3aed;
             --accent: #f59e0b;
@@ -63,7 +63,7 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
             color: var(--text-primary);
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 50%, #f0f9ff 100%);
             overflow-x: hidden;
         }
 
@@ -106,7 +106,7 @@
             left: 0;
             width: 100%;
             height: 100vh;
-            background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+            background: linear-gradient(135deg, #1e293b 0%, #334155 30%, #475569 60%, #64748b 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -132,12 +132,15 @@
         /* Moving Paper Airplane */
         .moving-airplane {
             position: absolute;
+            top: 50%;
+            left: 50%;
             width: 60px;
             height: 60px;
             opacity: 0;
             z-index: 10;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
             animation: airplaneJourney 8s ease-in-out forwards;
+            transform-origin: center center;
         }
 
         .moving-airplane svg {
@@ -148,47 +151,47 @@
         @keyframes airplaneJourney {
             0% {
                 opacity: 1;
-                transform: translate(-100px, 50vh) scale(0.8) rotate(-15deg);
+                transform: translate(-50%, -50%) scale(0.8) rotate(-15deg);
             }
             10% {
                 opacity: 1;
-                transform: translate(15%, 40%) scale(1) rotate(-5deg);
+                transform: translate(-50%, -50%) scale(1) rotate(-5deg);
             }
             20% {
                 opacity: 1;
-                transform: translate(30%, 30%) scale(1) rotate(0deg);
+                transform: translate(-50%, -50%) scale(1) rotate(0deg);
             }
             30% {
                 opacity: 1;
-                transform: translate(45%, 45%) scale(1) rotate(5deg);
+                transform: translate(-50%, -50%) scale(1) rotate(5deg);
             }
             40% {
                 opacity: 1;
-                transform: translate(60%, 25%) scale(1) rotate(-5deg);
+                transform: translate(-50%, -50%) scale(1) rotate(-5deg);
             }
             50% {
                 opacity: 1;
-                transform: translate(75%, 35%) scale(1) rotate(5deg);
+                transform: translate(-50%, -50%) scale(1) rotate(5deg);
             }
             60% {
                 opacity: 1;
-                transform: translate(85%, 50%) scale(1) rotate(-5deg);
+                transform: translate(-50%, -50%) scale(1) rotate(-5deg);
             }
             70% {
                 opacity: 1;
-                transform: translate(90%, 40%) scale(1) rotate(5deg);
+                transform: translate(-50%, -50%) scale(1) rotate(5deg);
             }
             80% {
                 opacity: 1;
-                transform: translate(95%, 30%) scale(1) rotate(-5deg);
+                transform: translate(-50%, -50%) scale(1) rotate(-5deg);
             }
             90% {
                 opacity: 1;
-                transform: translate(100%, 50%) scale(1) rotate(0deg);
+                transform: translate(-50%, -50%) scale(1) rotate(0deg);
             }
             100% {
-                opacity: 0;
-                transform: translate(120%, 50%) scale(0.8) rotate(15deg);
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1) rotate(0deg);
             }
         }
 
@@ -238,8 +241,8 @@
             white-space: nowrap;
         }
 
-        /* Circular positioning - 8 icons in a perfect circle around the airplane */
-        .domain-stop.digital-design.show { 
+        /* Circular positioning - 7 icons in a perfect circle around the airplane */
+        .domain-stop.graphic-digital-design.show { 
             transform: translate(-120px, -120px) scale(1) rotate(0deg);
             top: calc(50% - 120px);
             left: calc(50% - 120px);
@@ -249,12 +252,12 @@
             top: calc(50% - 160px);
             left: 50%;
         }
-        .domain-stop.content-creation.show { 
+        .domain-stop.content-creation-videography.show { 
             transform: translate(120px, -120px) scale(1) rotate(0deg);
             top: calc(50% - 120px);
             left: calc(50% + 120px);
         }
-        .domain-stop.fine-arts.show { 
+        .domain-stop.visual-fine-arts.show { 
             transform: translate(160px, 0px) scale(1) rotate(0deg);
             top: 50%;
             left: calc(50% + 160px);
@@ -264,17 +267,12 @@
             top: calc(50% + 120px);
             left: calc(50% + 120px);
         }
-        .domain-stop.videography.show { 
-            transform: translate(0px, 160px) scale(1) rotate(0deg);
-            top: calc(50% + 160px);
-            left: 50%;
-        }
-        .domain-stop.social-media.show { 
+        .domain-stop.social-media-strategy.show { 
             transform: translate(-120px, 120px) scale(1) rotate(0deg);
             top: calc(50% + 120px);
             left: calc(50% - 120px);
         }
-        .domain-stop.event-management.show { 
+        .domain-stop.research-insights.show { 
             transform: translate(-160px, 0px) scale(1) rotate(0deg);
             top: 50%;
             left: calc(50% - 160px);
@@ -297,7 +295,7 @@
         }
 
         /* Individual domain animations with staggered timing */
-        .domain-stop.digital-design.show { 
+        .domain-stop.graphic-digital-design.show { 
             animation: domainAppear 0.8s ease-out forwards;
             transform: translate(-120px, -120px) scale(1) rotate(0deg);
         }
@@ -305,11 +303,11 @@
             animation: domainAppear 0.8s ease-out forwards;
             transform: translate(0px, -160px) scale(1) rotate(0deg);
         }
-        .domain-stop.content-creation.show { 
+        .domain-stop.content-creation-videography.show { 
             animation: domainAppear 0.8s ease-out forwards;
             transform: translate(120px, -120px) scale(1) rotate(0deg);
         }
-        .domain-stop.fine-arts.show { 
+        .domain-stop.visual-fine-arts.show { 
             animation: domainAppear 0.8s ease-out forwards;
             transform: translate(160px, 0px) scale(1) rotate(0deg);
         }
@@ -317,15 +315,11 @@
             animation: domainAppear 0.8s ease-out forwards;
             transform: translate(120px, 120px) scale(1) rotate(0deg);
         }
-        .domain-stop.videography.show { 
-            animation: domainAppear 0.8s ease-out forwards;
-            transform: translate(0px, 160px) scale(1) rotate(0deg);
-        }
-        .domain-stop.social-media.show { 
+        .domain-stop.social-media-strategy.show { 
             animation: domainAppear 0.8s ease-out forwards;
             transform: translate(-120px, 120px) scale(1) rotate(0deg);
         }
-        .domain-stop.event-management.show { 
+        .domain-stop.research-insights.show { 
             animation: domainAppear 0.8s ease-out forwards;
             transform: translate(-160px, 0px) scale(1) rotate(0deg);
         }
@@ -373,7 +367,7 @@
         .logo-text {
             font-size: clamp(2rem, 6vw, 4rem);
             font-weight: 800;
-            background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -437,7 +431,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
             position: relative;
             overflow: hidden;
         }
@@ -619,7 +613,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
         }
 
         .explore-card:hover {
@@ -630,8 +624,8 @@
         .explore-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 50% !important;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -639,10 +633,23 @@
             color: white;
             font-size: 2rem;
             transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+            aspect-ratio: 1 / 1;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .explore-icon i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
         }
 
         .explore-card:hover .explore-icon {
-            transform: scale(1.1) rotate(5deg);
+            transform: scale(1.05) translateY(-2px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
         }
 
         .explore-card h3 {
@@ -686,7 +693,7 @@
 
         /* Registration Section */
         .registration-section {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
             color: white;
             text-align: center;
         }
@@ -767,6 +774,28 @@
             font-size: 1.3rem;
         }
 
+        /* Logo Watermark */
+        .logo-watermark {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            pointer-events: none;
+            z-index: 1;
+            mix-blend-mode: overlay;
+            filter: brightness(0.8) contrast(1.2);
+        }
+
+        .logo-watermark img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0.55;
+            filter: grayscale(10%);
+        }
+
         /* Floating Elements */
         .floating-elements {
             position: absolute;
@@ -828,7 +857,7 @@
             }
 
             /* Mobile circular positioning adjustments */
-            .domain-stop.digital-design.show { 
+            .domain-stop.graphic-digital-design.show { 
                 transform: translate(-80px, -80px) scale(1) rotate(0deg);
                 top: calc(50% - 80px);
                 left: calc(50% - 80px);
@@ -838,12 +867,12 @@
                 top: calc(50% - 100px);
                 left: 50%;
             }
-            .domain-stop.content-creation.show { 
+            .domain-stop.content-creation-videography.show { 
                 transform: translate(80px, -80px) scale(1) rotate(0deg);
                 top: calc(50% - 80px);
                 left: calc(50% + 80px);
             }
-            .domain-stop.fine-arts.show { 
+            .domain-stop.visual-fine-arts.show { 
                 transform: translate(100px, 0px) scale(1) rotate(0deg);
                 top: 50%;
                 left: calc(50% + 100px);
@@ -853,17 +882,12 @@
                 top: calc(50% + 80px);
                 left: calc(50% + 80px);
             }
-            .domain-stop.videography.show { 
-                transform: translate(0px, 100px) scale(1) rotate(0deg);
-                top: calc(50% + 100px);
-                left: 50%;
-            }
-            .domain-stop.social-media.show { 
+            .domain-stop.social-media-strategy.show { 
                 transform: translate(-80px, 80px) scale(1) rotate(0deg);
                 top: calc(50% + 80px);
                 left: calc(50% - 80px);
             }
-            .domain-stop.event-management.show { 
+            .domain-stop.research-insights.show { 
                 transform: translate(-100px, 0px) scale(1) rotate(0deg);
                 top: 50%;
                 left: calc(50% - 100px);
@@ -968,6 +992,26 @@
                 padding: 0 1rem;
             }
 
+            /* Watermark mobile adjustments */
+            .logo-watermark {
+                width: 350px;
+                height: 350px;
+            }
+
+            .logo-watermark img {
+                opacity: 0.65;
+            }
+
+
+        }
+
+        /* Mobile fallback watermark */
+        @media (max-width: 768px) {
+            .logo-watermark::before {
+                font-size: 5rem;
+            }
+        }
+
             .choice-buttons {
                 flex-direction: column;
                 align-items: center;
@@ -995,12 +1039,233 @@
                 max-width: 350px;
                 justify-content: center;
             }
+
+            /* Domains section mobile fixes */
+            .domains-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .domain-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .domain-card h3 {
+                font-size: clamp(1.1rem, 4vw, 1.3rem);
+                padding: 0 0.5rem;
+                line-height: 1.2;
+            }
+
+            .domain-card p {
+                font-size: clamp(0.9rem, 3.5vw, 1rem);
+                padding: 0 0.5rem;
+                line-height: 1.4;
+            }
         }
 
         @media (min-width: 1024px) {
             .explore-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
+            .domains-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .domains-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Domains Section Styles */
+        .domains-section {
+            background: var(--bg-secondary);
+            padding-top: 2rem;
+        }
+
+        .domains-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .domain-card {
+            background: var(--bg-primary);
+            padding: 2.5rem 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid var(--border-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .domain-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+        }
+
+        .domain-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .domain-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 50% !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+            aspect-ratio: 1 / 1;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .domain-icon i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .domain-card:hover .domain-icon {
+            transform: scale(1.05) translateY(-2px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .domain-card h3 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .domain-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .domain-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .domain-skills span {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid var(--border);
+        }
+
+        /* Interactive Domain Selector Styles */
+        .domain-selector {
+            cursor: pointer;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .domain-selector.expanded {
+            height: auto;
+            min-height: 120px;
+        }
+
+        .domain-selector:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .domain-preview {
+            text-align: center;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .domain-selector.expanded .domain-preview {
+            opacity: 1;
+            max-height: none;
+            margin-top: 1rem;
+        }
+
+        .domain-preview p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .domain-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .domain-selector.expanded .domain-skills {
+            opacity: 1;
+            max-height: none;
+            margin-top: 1rem;
+        }
+
+        .domain-skills span {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid var(--border);
+        }
+
+        /* Modal Styles */
+
+
+
+
+        .domains-cta {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .domains-cta p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
         }
 
         /* Utility Classes */
@@ -1022,6 +1287,11 @@
     </style>
 </head>
 <body>
+    <!-- Logo Watermark -->
+    <div class="logo-watermark">
+        <img src="HF LOGO.png" alt="HighFliers Logo Watermark" style="width: 100%; height: 100%; object-fit: contain; opacity: 0.15;">
+    </div>
+    
     <!-- Animated Story Intro -->
     <div class="story-intro" id="storyIntro">
         <div class="story-container">
@@ -1043,37 +1313,33 @@
 
             <!-- Domain Icons that appear in a circle around the airplane -->
             <div class="domain-journey">
-                <div class="domain-stop digital-design" data-domain="Digital Design">
+                <div class="domain-stop graphic-digital-design" data-domain="Graphic & Digital Design">
                     <i class="fas fa-palette"></i>
-                    <span class="domain-label">Digital Design</span>
+                    <span class="domain-label">Graphic & Digital Design</span>
                 </div>
                 <div class="domain-stop content-writing" data-domain="Content Writing">
                     <i class="fas fa-pen-fancy"></i>
                     <span class="domain-label">Content Writing</span>
                 </div>
-                <div class="domain-stop content-creation" data-domain="Content Creation">
-                    <i class="fas fa-lightbulb"></i>
-                    <span class="domain-label">Content Creation</span>
+                <div class="domain-stop content-creation-videography" data-domain="Content Creation & Videography">
+                    <i class="fas fa-video"></i>
+                    <span class="domain-label">Content Creation & Videography</span>
                 </div>
-                <div class="domain-stop fine-arts" data-domain="Fine Arts">
+                <div class="domain-stop visual-fine-arts" data-domain="Visual & Fine Arts">
                     <i class="fas fa-brush"></i>
-                    <span class="domain-label">Fine Arts</span>
+                    <span class="domain-label">Visual & Fine Arts</span>
                 </div>
                 <div class="domain-stop public-speaking" data-domain="Public Speaking">
                     <i class="fas fa-microphone"></i>
                     <span class="domain-label">Public Speaking</span>
                 </div>
-                <div class="domain-stop videography" data-domain="Videography">
-                    <i class="fas fa-camera"></i>
-                    <span class="domain-label">Videography</span>
-                </div>
-                <div class="domain-stop social-media" data-domain="Social Media">
+                <div class="domain-stop social-media-strategy" data-domain="Social Media Strategy">
                     <i class="fas fa-share-alt"></i>
-                    <span class="domain-label">Social Media</span>
+                    <span class="domain-label">Social Media Strategy</span>
                 </div>
-                <div class="domain-stop event-management" data-domain="Event Management">
-                    <i class="fas fa-calendar-check"></i>
-                    <span class="domain-label">Event Management</span>
+                <div class="domain-stop research-insights" data-domain="Research & Insights">
+                    <i class="fas fa-chart-line"></i>
+                    <span class="domain-label">Research & Insights</span>
                 </div>
             </div>
 
@@ -1107,7 +1373,7 @@
             <div class="hero-content">
                 <h1>Welcome to HighFliers</h1>
                 <div class="tagline">JMIT's Most Dynamic Creative Community</div>
-                <div class="intro">Where creativity meets opportunity. Join 50+ talented students exploring 8 exciting domains and making their mark at JMIT.</div>
+                <div class="intro">HighFliers unites driven students to organize exciting events that develop leadership, communication, and teamwork while building lasting professional connections.</div>
                 
                 <div class="choice-buttons">
                     <button class="btn btn-secondary" onclick="showExploreContent()">
@@ -1196,6 +1462,125 @@
         </div>
     </section>
 
+    <!-- Domains Section -->
+    <section class="domains-section section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Select Your Interest</h2>
+                <p>Click on any domain to explore what we offer and discover your creative path</p>
+            </div>
+            
+            <div class="domains-grid">
+                <div class="domain-card domain-selector" data-domain="graphic-digital-design">
+                    <div class="domain-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Graphic & Digital Design</h3>
+                    <div class="domain-preview">
+                        <p>Creates the club's visual identity through brand guidelines, logos, event posters, digital banners, and web graphics. Ensures visual consistency across platforms while optimizing assets for print and digital use. Members develop skills in typography, layout, UI design, and brand strategy through high-visibility projects.</p>
+                        <div class="domain-skills">
+                            <span>Adobe Creative Suite</span>
+                            <span>UI/UX Design</span>
+                            <span>Brand Identity</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="domain-card domain-selector" data-domain="content-writing">
+                    <div class="domain-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Content Writing</h3>
+                    <div class="domain-preview">
+                        <p>Produces authoritative copy for websites, press releases, newsletters, and program materials. Maintains consistent tone while ensuring accuracy for diverse audiences including students, faculty, and partners. Members build research-driven writing skills and editorial expertise.</p>
+                        <div class="domain-skills">
+                            <span>Research-driven Writing</span>
+                            <span>Editorial Workflows</span>
+                            <span>Content Planning</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="domain-card domain-selector" data-domain="content-creation-videography">
+                    <div class="domain-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Content Creation & Videography</h3>
+                    <div class="domain-preview">
+                        <p>Documents and promotes club activities through event highlights, promotional videos, tutorials, and livestreams. Manages full production workflows from planning to delivery. Members gain experience in camera operation, video editing, and distribution strategy.</p>
+                        <div class="domain-skills">
+                            <span>Camera Operation</span>
+                            <span>Storyboarding</span>
+                            <span>Video Editing</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="domain-card domain-selector" data-domain="visual-fine-arts">
+                    <div class="domain-icon">
+                        <i class="fas fa-brush"></i>
+                    </div>
+                    <h3>Visual & Fine Arts</h3>
+                    <div class="domain-preview">
+                        <p>Enhances events through stage design, artistic installations, and creative workshops. Collaborates across domains to align aesthetics with event objectives. Members develop art direction, set design, and experiential creativity skills.</p>
+                        <div class="domain-skills">
+                            <span>Art Direction</span>
+                            <span>Set Design</span>
+                            <span>Experiential Creativity</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="domain-card domain-selector" data-domain="public-speaking">
+                    <div class="domain-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Public Speaking</h3>
+                    <div class="domain-preview">
+                        <p>Delivers training programs including speech clinics, debate coaching, and presentation workshops. Prepares members for competitive speaking and leadership roles through structured feedback and mentorship. Focus on rhetoric, delivery, and confidence-building.</p>
+                        <div class="domain-skills">
+                            <span>Speech Structure</span>
+                            <span>Rhetoric & Delivery</span>
+                            <span>Confidence Building</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="domain-card domain-selector" data-domain="social-media-strategy">
+                    <div class="domain-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Social Media Strategy</h3>
+                    <div class="domain-preview">
+                        <p>Manages digital presence through campaign planning, content scheduling, community management, and analytics. Develops data-informed strategies for growth and engagement across platforms. Members gain experience in social media analytics and optimization.</p>
+                        <div class="domain-skills">
+                            <span>Social Media Analytics</span>
+                            <span>Growth Tactics</span>
+                            <span>Content Optimization</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="domain-card domain-selector" data-domain="research-insights">
+                    <div class="domain-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Research & Insights</h3>
+                    <div class="domain-preview">
+                        <p>Provides analytical foundation through issue research, delegate briefs, country profiles, and impact measurement. Conducts audience analysis and post-event evaluations to inform strategic decisions. Members develop research methodology, data visualization, and reporting expertise.</p>
+                        <div class="domain-skills">
+                            <span>Research Methodology</span>
+                            <span>Data Visualization</span>
+                            <span>Reporting Expertise</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
     <!-- Registration Section -->
     <section class="registration-section section" id="registrationSection">
         <div class="container">
@@ -1240,37 +1625,33 @@
                 () => {
                     movingAirplane.style.opacity = '1';
                 },
-                // Show Digital Design domain
+                // Show Graphic & Digital Design domain
                 () => {
-                    document.querySelector('.domain-stop.digital-design').classList.add('show');
+                    document.querySelector('.domain-stop.graphic-digital-design').classList.add('show');
                 },
                 // Show Content Writing domain
                 () => {
                     document.querySelector('.domain-stop.content-writing').classList.add('show');
                 },
-                // Show Content Creation domain
+                // Show Content Creation & Videography domain
                 () => {
-                    document.querySelector('.domain-stop.content-creation').classList.add('show');
+                    document.querySelector('.domain-stop.content-creation-videography').classList.add('show');
                 },
-                // Show Fine Arts domain
+                // Show Visual & Fine Arts domain
                 () => {
-                    document.querySelector('.domain-stop.fine-arts').classList.add('show');
+                    document.querySelector('.domain-stop.visual-fine-arts').classList.add('show');
                 },
                 // Show Public Speaking domain
                 () => {
                     document.querySelector('.domain-stop.public-speaking').classList.add('show');
                 },
-                // Show Videography domain
+                // Show Social Media Strategy domain
                 () => {
-                    document.querySelector('.domain-stop.videography').classList.add('show');
+                    document.querySelector('.domain-stop.social-media-strategy').classList.add('show');
                 },
-                // Show Social Media domain
+                // Show Research & Insights domain
                 () => {
-                    document.querySelector('.domain-stop.social-media').classList.add('show');
-                },
-                // Show Event Management domain
-                () => {
-                    document.querySelector('.domain-stop.event-management').classList.add('show');
+                    document.querySelector('.domain-stop.research-insights').classList.add('show');
                 },
                 // Hide story intro and show main content
                 () => {
@@ -1339,7 +1720,54 @@
             // Show registration section by default
             const registrationSection = document.getElementById('registrationSection');
             registrationSection.style.display = 'block';
-        });
+
+                    // Ensure watermark image loads properly
+        const watermarkImg = document.querySelector('.logo-watermark img');
+        if (watermarkImg) {
+            watermarkImg.onload = function() {
+                console.log('Watermark image loaded successfully');
+            };
+            watermarkImg.onerror = function() {
+                console.log('Watermark image failed to load, showing fallback');
+                this.style.display = 'none';
+                document.querySelector('.logo-watermark::before').style.display = 'block';
+            };
+        }
+
+        // Initialize domain selectors
+        initializeDomainSelectors();
+    });
+
+
+
+        // Domain expand/collapse functions
+        function toggleDomainExpansion(domainCard) {
+            const isExpanded = domainCard.classList.contains('expanded');
+            
+            // Close all other expanded cards
+            document.querySelectorAll('.domain-selector.expanded').forEach(card => {
+                if (card !== domainCard) {
+                    card.classList.remove('expanded');
+                }
+            });
+            
+            // Toggle current card
+            if (isExpanded) {
+                domainCard.classList.remove('expanded');
+            } else {
+                domainCard.classList.add('expanded');
+            }
+        }
+
+        function initializeDomainSelectors() {
+            const domainCards = document.querySelectorAll('.domain-selector');
+            
+            domainCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    toggleDomainExpansion(this);
+                });
+            });
+        }
 
         // Intersection Observer for fade-in animations
         const observerOptions = {
