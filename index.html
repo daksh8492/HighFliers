@@ -129,26 +129,27 @@
             justify-content: center;
         }
 
-        /* Moving Paper Airplane */
-        .moving-airplane {
+        /* Moving HF Logo */
+        .moving-logo {
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 60px;
-            height: 60px;
+            width: 200px;
+            height: 200px;
             opacity: 0;
-            z-index: 10;
+            z-index: 20;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
-            animation: airplaneJourney 8s ease-in-out forwards;
+            animation: logoJourney 8s ease-in-out forwards;
             transform-origin: center center;
         }
 
-        .moving-airplane svg {
+        .moving-logo img {
             width: 100%;
             height: 100%;
+            object-fit: contain;
         }
 
-        @keyframes airplaneJourney {
+        @keyframes logoJourney {
             0% {
                 opacity: 1;
                 transform: translate(-50%, -50%) scale(0.8) rotate(-15deg);
@@ -220,6 +221,7 @@
             left: 50%;
             margin-left: -40px;
             margin-top: -40px;
+            z-index: 5;
         }
 
         .domain-stop.show {
@@ -241,41 +243,41 @@
             white-space: nowrap;
         }
 
-        /* Circular positioning - 7 icons in a perfect circle around the airplane */
+        /* Circular positioning - 7 icons in a perfect circle around the logo */
         .domain-stop.graphic-digital-design.show { 
-            transform: translate(-120px, -120px) scale(1) rotate(0deg);
-            top: calc(50% - 120px);
-            left: calc(50% - 120px);
+            transform: translate(-140px, -140px) scale(1) rotate(0deg);
+            top: calc(50% - 140px);
+            left: calc(50% - 140px);
         }
         .domain-stop.content-writing.show { 
-            transform: translate(0px, -160px) scale(1) rotate(0deg);
-            top: calc(50% - 160px);
+            transform: translate(0px, -180px) scale(1) rotate(0deg);
+            top: calc(50% - 180px);
             left: 50%;
         }
         .domain-stop.content-creation-videography.show { 
-            transform: translate(120px, -120px) scale(1) rotate(0deg);
-            top: calc(50% - 120px);
-            left: calc(50% + 120px);
+            transform: translate(140px, -140px) scale(1) rotate(0deg);
+            top: calc(50% - 140px);
+            left: calc(50% + 140px);
         }
         .domain-stop.visual-fine-arts.show { 
-            transform: translate(160px, 0px) scale(1) rotate(0deg);
+            transform: translate(180px, 0px) scale(1) rotate(0deg);
             top: 50%;
-            left: calc(50% + 160px);
+            left: calc(50% + 180px);
         }
         .domain-stop.public-speaking.show { 
-            transform: translate(120px, 120px) scale(1) rotate(0deg);
-            top: calc(50% + 120px);
-            left: calc(50% + 120px);
+            transform: translate(140px, 140px) scale(1) rotate(0deg);
+            top: calc(50% + 140px);
+            left: calc(50% + 140px);
         }
         .domain-stop.social-media-strategy.show { 
-            transform: translate(-120px, 120px) scale(1) rotate(0deg);
-            top: calc(50% + 120px);
-            left: calc(50% - 120px);
+            transform: translate(-140px, 140px) scale(1) rotate(0deg);
+            top: calc(50% + 140px);
+            left: calc(50% - 140px);
         }
         .domain-stop.research-insights.show { 
-            transform: translate(-160px, 0px) scale(1) rotate(0deg);
+            transform: translate(-180px, 0px) scale(1) rotate(0deg);
             top: 50%;
-            left: calc(50% - 160px);
+            left: calc(50% - 180px);
         }
 
         /* Enhanced domain appear animation */
@@ -711,6 +713,27 @@
             margin-top: 3rem;
         }
 
+        .registration-subtitle {
+            text-align: center;
+            margin: 2rem 0 3rem 0;
+        }
+
+        .registration-subtitle p {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .registration-subtitle span {
+            color: rgba(255,255,255,0.85);
+            font-size: 1rem;
+            font-weight: 400;
+            display: block;
+            line-height: 1.5;
+        }
+
         .register-btn-large {
             background: white;
             color: var(--primary);
@@ -737,13 +760,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 1.5rem;
+            gap: 2rem;
+            margin-top: 1rem;
         }
 
         .contact-btn {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.15);
             color: white;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem;
             border-radius: var(--radius);
             text-decoration: none;
             font-weight: 600;
@@ -752,7 +776,9 @@
             align-items: center;
             gap: 0.75rem;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         .contact-btn:hover {
@@ -762,11 +788,16 @@
 
         .social-handle {
             color: rgba(255,255,255,0.9);
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 600;
             display: flex;
             align-items: center;
             gap: 0.75rem;
+            padding: 1rem 2rem;
+            background: rgba(255,255,255,0.08);
+            border-radius: var(--radius);
+            border: 1px solid rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
         }
 
         .social-handle i {
@@ -833,9 +864,9 @@
             }
 
             /* Story intro mobile fixes */
-            .moving-airplane {
-                width: 50px;
-                height: 50px;
+            .moving-logo {
+                width: 140px;
+                height: 140px;
             }
 
             .domain-stop {
@@ -858,39 +889,39 @@
 
             /* Mobile circular positioning adjustments */
             .domain-stop.graphic-digital-design.show { 
-                transform: translate(-80px, -80px) scale(1) rotate(0deg);
-                top: calc(50% - 80px);
-                left: calc(50% - 80px);
+                transform: translate(-100px, -100px) scale(1) rotate(0deg);
+                top: calc(50% - 100px);
+                left: calc(50% - 100px);
             }
             .domain-stop.content-writing.show { 
-                transform: translate(0px, -100px) scale(1) rotate(0deg);
-                top: calc(50% - 100px);
+                transform: translate(0px, -130px) scale(1) rotate(0deg);
+                top: calc(50% - 130px);
                 left: 50%;
             }
             .domain-stop.content-creation-videography.show { 
-                transform: translate(80px, -80px) scale(1) rotate(0deg);
-                top: calc(50% - 80px);
-                left: calc(50% + 80px);
-            }
-            .domain-stop.visual-fine-arts.show { 
-                transform: translate(100px, 0px) scale(1) rotate(0deg);
-                top: 50%;
+                transform: translate(100px, -100px) scale(1) rotate(0deg);
+                top: calc(50% - 100px);
                 left: calc(50% + 100px);
             }
+            .domain-stop.visual-fine-arts.show { 
+                transform: translate(130px, 0px) scale(1) rotate(0deg);
+                top: 50%;
+                left: calc(50% + 130px);
+            }
             .domain-stop.public-speaking.show { 
-                transform: translate(80px, 80px) scale(1) rotate(0deg);
-                top: calc(50% + 80px);
-                left: calc(50% + 80px);
+                transform: translate(100px, 100px) scale(1) rotate(0deg);
+                top: calc(50% + 100px);
+                left: calc(50% + 100px);
             }
             .domain-stop.social-media-strategy.show { 
-                transform: translate(-80px, 80px) scale(1) rotate(0deg);
-                top: calc(50% + 80px);
-                left: calc(50% - 80px);
+                transform: translate(-100px, 100px) scale(1) rotate(0deg);
+                top: calc(50% + 100px);
+                left: calc(50% - 100px);
             }
             .domain-stop.research-insights.show { 
-                transform: translate(-100px, 0px) scale(1) rotate(0deg);
+                transform: translate(-130px, 0px) scale(1) rotate(0deg);
                 top: 50%;
-                left: calc(50% - 100px);
+                left: calc(50% - 130px);
             }
 
             .story-text h2 {
@@ -1304,11 +1335,9 @@
                 <div class="particle"></div>
             </div>
 
-            <!-- Moving Paper Airplane that transforms -->
-            <div class="moving-airplane" id="movingAirplane">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 12L3 3L4.5 12L3 21L21 12Z" fill="white" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
-                </svg>
+            <!-- Moving HF Logo that transforms -->
+            <div class="moving-logo" id="movingLogo">
+                <img src="HF LOGO.png" alt="HighFliers Logo" style="width: 100%; height: 100%; object-fit: contain;">
             </div>
 
             <!-- Domain Icons that appear in a circle around the airplane -->
@@ -1590,20 +1619,25 @@
             </div>
             
             <div class="registration-cta">
-                <button type="button" class="register-btn-large" onclick="window.open('GOOGLE_FORM_URL_HERE', '_blank')">
+                <button type="button" class="register-btn-large" onclick="window.open('https://docs.google.com/forms/d/19fU3sr-A-GIciBoO_P0NcEEDObBgN_3fNzUZBdYaXjs/viewform', '_blank')">
                     <i class="fab fa-google"></i>
-                    Register with Google Forms
+                    Register Now
                 </button>
                 
+                <div class="registration-subtitle">
+                    <p>Become a HighFlier</p>
+                    <span>Join our creative community and unlock your potential</span>
+                </div>
+                
                 <div class="quick-contact-info">
-                    <a href="https://wa.me/91[PHONE_NUMBER]?text=Hi! I'm interested in joining HighFliers Creative Club. Can you tell me more?" class="contact-btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                        WhatsApp
+                    <a href="https://www.instagram.com/jmit_highfliers?utm_source=ig_web_button_share_sheet&igsh=MTd5dXp1ejN6bTdxbQ==" class="contact-btn" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        Follow us on Instagram
                     </a>
                     
                     <div class="social-handle">
                         <i class="fab fa-instagram"></i>
-                        @highfliers_creative
+                        @jmit_highfliers
                     </div>
                 </div>
             </div>
@@ -1614,7 +1648,7 @@
         // Animated Story Intro Sequence
         function playStoryIntro() {
             const storyIntro = document.getElementById('storyIntro');
-            const movingAirplane = document.getElementById('movingAirplane');
+            const movingLogo = document.getElementById('movingLogo');
             const domainStops = document.querySelectorAll('.domain-stop');
             const storyText = document.getElementById('storyText');
             const logoFormation = document.getElementById('logoFormation');
